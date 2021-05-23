@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Input from "./input";
 
-const Reset = () => {
+const Reset = (props) => {
   const inputEl = useRef(null);
   const handleClick = (e) => {
     inputEl.current.reset();
@@ -11,7 +11,7 @@ const Reset = () => {
     <>
       <Input ref={inputEl} />
       <button type="button" onClick={handleClick}>
-        Reset
+        {props.text}
       </button>
     </>
   );
